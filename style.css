@@ -1,0 +1,143 @@
+* {
+
+}
+body{
+    background-color: aqua;
+}
+.btn {   
+}
+.space {
+    height:80px;
+}
+header {
+    position: fixed;
+    width: 65%;
+    text-align: center;
+    align-items: center;
+}
+header h1{
+    font-weight: 900;
+}
+header:hover {
+    background: dimgray;
+    color: floralwhite;
+}
+.active {
+    background: yellowgreen;
+    cursor: pointer;
+}
+.active:hover {
+    background: #1F87FF; 
+}
+.btn:hover {
+    background-color: rgb(196, 200, 255);
+}
+.container {
+    display: grid;
+    margin-top: 37px;
+    width: 65%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+    border: 2px solid whitesmoke;
+}
+
+/*    ===== Female Steenbok 30 or older =====     */
+.steenbok-card {
+
+    background: rgb(59, 131, 131);
+}
+.female-box {
+    margin-top: 1rem;
+    width: 85px;
+    height: 80px;
+}
+.femalesteenbok-img {
+
+    max-width: 100%;
+    height: auto;
+}
+.age-line {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(30, 9, 44);
+
+}
+/*    ===== End Female Steenbok 30 or older =====     */
+
+
+
+/*    ===== Creditcards expired =====     */
+.cards {
+    height: 220px;
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgb(39, 18, 66);
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 12px -1px 33px 5px rgba(0,0,0,0);
+    border-radius: 5%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+figure {
+    margin-top: 10px;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    cursor: pointer;
+    background-color: rgb(39, 18, 66);
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+figcaption {
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 1%;
+    text-align: center;
+}
+.info-box {
+    margin-top: 40px;
+    padding: 2px 0 2px 15px;
+    width: 90%;   
+}
+p {
+    font-size: 0.8rem;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 255, 115);
+    font-weight: bolder;
+}
+
+
+.country-cards {
+    height: 80px;
+    background: white;
+    border: 2px solid black;
+}
+.country-cards-text {
+    color: teal;
+    font-size: small;
+}
+
+
+.country-btn {
+    height: 50px;
+    cursor: pointer;
+}
+.country-btn:hover {
+    background: violet;
+}
+
+.gemiddelde-leeftijd-bak {
+    position: fixed;
+    width: 380px;
+    top: 20%;
+    left: 70%; 
+    border: 2px solid whitesmoke;
+}
+.show-land-gemiddelde-leeftijd-text {
+    color: #0B325E;
+    font-size: 1rem;
+}
