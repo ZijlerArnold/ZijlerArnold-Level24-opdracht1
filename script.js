@@ -1,3 +1,16 @@
+
+// De database zit niet op een aparte file.
+// Snap niet waarom het me niet lukt
+// Los ik later wel op, moet nu doorgaan.
+
+// // ===== Import from database.js =====
+//import { randomPersonData } from './database';
+// // ===== Import from database.js =====
+
+
+
+
+
 const randomPersonData = [
   { 
     name: "Marianna",
@@ -3806,9 +3819,15 @@ const randomPersonData = [
 
 
 
+
+/////////////////////////////////////////////////////////////////////////////
+
+
 // // ===== Import from database.js =====
 //import { randomPersonData } from './database';
 // // ===== Import from database.js =====
+
+
 
 console.log(`===== Mijn opdrachten =====`);
 alert('Subopdracht: gemiddelde leeftijd');
@@ -3825,18 +3844,12 @@ steenBokButton.addEventListener('click', (e) => {
 //const isCapricorn = randomPersonData.filter (person => person.birthday.dmy === "22/12" || "19/01");
  let test = randomPersonData.map(months)
  //console.log(test)
-
 // 22-12 tm 19-01
-
 const datum = randomPersonData.filter(person => person.days)
-
-
  const getSteenBokFemale = randomPersonData
  .filter(getGenderFemales)
  .filter(getAgesAboveThirthy)
  //.filter(days === 29)
-
-
  let output = '';
  const conTainer = document.querySelector('.container');
 
@@ -3895,36 +3908,6 @@ creditCardBtn.addEventListener('click', (e) => {
  conTainer.innerHTML = output;
 });
  // ======================= END CREDITCARDS EXPIRATION ===
-
-
-
-
-
-
-
-// =========== BUTTON Subopdracht: aantal mensen in landen ======================
-// const mostPeopleBtn = document.querySelector('.most-people-btn');
-
-// mostPeopleBtn.addEventListener('click', (e) => {
-//  const allCountries = country => country.region;
-//  const printOutAllCountries = randomPersonData.filter(allCountries);
-//  const conTainer = document.querySelector('.container');
-//  let output = '';
-//  // ============== !!!bringit to html!!! ==================
-//  printOutAllCountries.forEach(country => {
-//    output += `                
-//        <div class="country-cards">
-//            <h3>${country.region}</h3>
-//            <hr>
-//            <p class="country-cards-text">
-//              People: ${country.name}<br>
-//            </p>
-//        </div>
-//   `;
-//  });
-//    conTainer.innerHTML = output;
-// });
-// =========== ENDBUTTON Subopdracht: aantal mensen in landen ======================
 
 
 
