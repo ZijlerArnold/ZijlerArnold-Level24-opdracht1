@@ -1,11 +1,13 @@
+// Supopdracht: gemiddelde leeftijd
 
 // De database zit niet op een aparte file.
 // Snap niet waarom het me niet lukt
 // Los ik later wel op, moet nu doorgaan.
 
-// // ===== Import from database.js =====
-//import { randomPersonData } from './database';
-// // ===== Import from database.js =====
+
+
+
+
 
 
 
@@ -3820,7 +3822,9 @@ const randomPersonData = [
 
 
 
-/////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 // // ===== Import from database.js =====
@@ -3832,6 +3836,56 @@ const randomPersonData = [
 console.log(`===== Mijn opdrachten =====`);
 alert('Subopdracht: gemiddelde leeftijd');
 console.log(randomPersonData.length);
+
+
+
+  // GEMIDDELDE LEEFTIJD
+  // =========== MAKING BUTTONS WITH COUNTRY NAMES ======================
+  const gemiddeldeAgeBtn = document.querySelector('.gemiddelde-age-btn');
+
+  gemiddeldeAgeBtn.addEventListener('click', (e) => {
+      const conTainer = document.querySelector('.container');
+      let output = '';
+      const namesCountries = randomPersonData
+      .filter(country => country.region);
+      namesCountries.forEach(country => {
+      // ============== !!!bringit to html!!! ==================
+      output += `                
+              <button class="country-btn">${country.region}</button>
+      `;
+    });  
+    conTainer.innerHTML = output;
+    // ===buttons gemiddelde leeftijd===
+    const showCountryWithGemiddeldeAge = document.querySelector('.show-land-gemiddelde-leeftijd-text');
+    const counTryButtons = document.querySelectorAll('.country-btn');
+
+    counTryButtons.forEach(button => {  
+      button.addEventListener('click', (e) => {
+        const landButton = button.innerHTML;//content van de buttons zelf!!!
+        const getAverageResidents = land => {
+          let personsFromCountry = randomPersonData.filter( country => country.region === land)    
+          .map(person => person.age);
+          let ageSum = personsFromCountry.reduce((total, age) => total + age, 0);
+          let amountOfPeople = personsFromCountry.length;
+          let avgAge = ageSum / amountOfPeople;
+          let roundedSum = parseInt(avgAge);
+          return roundedSum;
+        }; 
+        //console.log(getAverageResidents(landButton));
+        let avgAgeIncountry = getAverageResidents(landButton);       
+        output = `  
+        Gemiddelde leeftijd in ${landButton}: ${avgAgeIncountry}.  
+        `;
+        showCountryWithGemiddeldeAge.innerHTML = output;
+      });
+    });// =====end buttons gemiddelde leeftijd =====   
+});
+// !!!!=========== END MAKING BUTTONS WITH COUNTRY NAMES ========
+
+
+
+
+
   
 
 // =========== BUTTON FEMALE STEENBOK 30 OR OLDER =======================
@@ -3913,48 +3967,5 @@ creditCardBtn.addEventListener('click', (e) => {
 
 
 
-
-
-  // =========== MAKING BUTTONS WITH COUNTRY NAMES ======================
-  const gemiddeldeAgeBtn = document.querySelector('.gemiddelde-age-btn');
-
-  gemiddeldeAgeBtn.addEventListener('click', (e) => {
-      const conTainer = document.querySelector('.container');
-      let output = '';
-      const namesCountries = randomPersonData
-      .filter(country => country.region);
-      namesCountries.forEach(country => {
-      // ============== !!!bringit to html!!! ==================
-      output += `                
-              <button class="country-btn">${country.region}</button>
-      `;
-    });  
-    conTainer.innerHTML = output;
-    // ===buttons gemiddelde leeftijd===
-    const showCountryWithGemiddeldeAge = document.querySelector('.show-land-gemiddelde-leeftijd-text');
-    const counTryButtons = document.querySelectorAll('.country-btn');
-
-    counTryButtons.forEach(button => {  
-      button.addEventListener('click', (e) => {
-        const landButton = button.innerHTML;//content van de buttons zelf!!!
-        const getAverageResidents = land => {
-          let personsFromCountry = randomPersonData.filter( country => country.region === land)    
-          .map(person => person.age);
-          let ageSum = personsFromCountry.reduce((total, age) => total + age, 0);
-          let amountOfPeople = personsFromCountry.length;
-          let avgAge = ageSum / amountOfPeople;
-          let roundedSum = parseInt(avgAge);
-          return roundedSum;
-        }; 
-        //console.log(getAverageResidents(landButton));
-        let avgAgeIncountry = getAverageResidents(landButton);       
-        output = `  
-        Gemiddelde leeftijd in ${landButton}: ${avgAgeIncountry}.  
-        `;
-        showCountryWithGemiddeldeAge.innerHTML = output;
-      });
-    });// =====end buttons gemiddelde leeftijd =====   
-});
-// !!!!=========== END MAKING BUTTONS WITH COUNTRY NAMES ========
 
 
