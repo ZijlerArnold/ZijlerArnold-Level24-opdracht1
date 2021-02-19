@@ -3811,6 +3811,7 @@ const randomPersonData = [
 // // ===== Import from database.js =====
 
 console.log(`===== Mijn opdrachten =====`);
+alert('Subopdracht: gemiddelde leeftijd');
 console.log(randomPersonData.length);
   
 
